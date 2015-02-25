@@ -1,0 +1,12 @@
+# qiime_parameters.txt
+# WARNING: DO NOT EDIT OR DELETE Qiime/qiime_parameters.txt. Users should copy this file and edit copies of it.
+
+# OTU picker parameters
+pick_otus:enable_rev_strand_match	True
+
+# Multiple sequence alignment parameters
+align_seqs:template_fp	/home/ubuntu/qiime_software/gg_otus-13_8-release/rep_set_aligned/97_otus.fasta
+
+# Taxonomy assignment parameters
+assign_taxonomy:id_to_taxonomy_fp	/home/ubuntu/qiime_software/gg_otus-13_8-release/taxonomy/97_otu_taxonomy.txt
+assign_taxonomy:reference_seqs_fp	/home/ubuntu/qiime_software/gg_otus-13_8-release/rep_set/97_otus.fasta
