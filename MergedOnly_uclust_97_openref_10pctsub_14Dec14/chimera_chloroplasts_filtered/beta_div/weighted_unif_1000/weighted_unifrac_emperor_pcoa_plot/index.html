@@ -1,0 +1,358 @@
+<!--
+*Summary of Emperor's Information*
+Command executed on March 03, 2015 at 09:46:49
+Emperor Version: 0.9.3
+QIIME Version: 0.9.3
+HostName: Hollys-MacBook-Retina.local
+Metadata: /Users/hollybik/Desktop/data/aquarium_data/mapping_files/final_dataset/AQmapfile_ALLRUNS5_final_1Oct14_collapsereps.txt
+Coordinates: /Users/hollybik/Desktop/data/aquarium_data/MergedOnly_uclust_97_openref_10pctsub_14Dec14/chimera_chloroplasts_filtered/beta_div/weighted_unif_1000/weighted_unifrac_pc.txt
+Command: /macqiime/bin/make_emperor.py -i /Users/hollybik/Desktop/data/aquarium_data/MergedOnly_uclust_97_openref_10pctsub_14Dec14/chimera_chloroplasts_filtered/beta_div/weighted_unif_1000/weighted_unifrac_pc.txt -o /Users/hollybik/Desktop/data/aquarium_data/MergedOnly_uclust_97_openref_10pctsub_14Dec14/chimera_chloroplasts_filtered/beta_div/weighted_unif_1000/weighted_unifrac_emperor_pcoa_plot/ -m /Users/hollybik/Desktop/data/aquarium_data/mapping_files/final_dataset/AQmapfile_ALLRUNS5_final_1Oct14_collapsereps.txt --ignore_missing_samples
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Emperor</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="emperor_required_resources/img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="emperor_required_resources/emperor/css/emperor.css">
+    <link rel="stylesheet" type="text/css" href="emperor_required_resources/css/jquery-ui2.css">
+    <link rel="stylesheet" type="text/css" href="emperor_required_resources/css/colorPicker.css">
+    <link rel="stylesheet" type="text/css" href="emperor_required_resources/css/spectrum.css">
+    <link rel="stylesheet" type="text/css" href="emperor_required_resources/css/d3.parcoords.css">
+    <table id="logotable" style="vertical-align:middle;text-align:center;height:100%;width:100%;margin:0;padding:0;border:0;">
+        <tr><td><img src="emperor_required_resources/img/emperor.png" alt="Emperor" id="logo"/></td></tr>
+    </table>
+    <script type="text/javascript" src="emperor_required_resources/js/d3.v3.min.js"></script>
+    <script type="text/javascript" src="emperor_required_resources/js/d3.parcoords.js"></script>
+    <script type="text/javascript" src="emperor_required_resources/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="emperor_required_resources/js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script src="emperor_required_resources/js/jquery.colorPicker.js"></script>
+    <script src="emperor_required_resources/js/spectrum.js"></script>
+
+    <script src="emperor_required_resources/js/Three.js"></script>
+    <script src="emperor_required_resources/js/js/Detector.js"></script>
+    <script src="emperor_required_resources/js/js/RequestAnimationFrame.js"></script>
+    <script src="emperor_required_resources/emperor/js/emperor.js"></script>
+    <script type="text/javascript" src="emperor_required_resources/js/THREEx.screenshot.js"></script>
+    <script type="text/javascript" src="emperor_required_resources/js/FileSaver.min.js"></script>
+    
+    <script type="text/javascript">
+    
+var g_mappingFileHeaders = ['SampleID','BarcodeSequence','LinkerPrimerSequence','SampleType','Location','Days','DateTime','pH','Temp','Salinity','O2','Nitrate','Nitrite','NH4','Phosphorus','Hardness','Alkalinity','Sulfide','Description'];
+var g_mappingFileData = { 'CP.13.sed.PM': ['CP.13.sed.PM','CCTAATAA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','13.5','2012-12-13T17:00:00','8.15','24.4','46.2','6.8','19.5','62','0.84','230','8280','213','0.8','Day.13.5.Sediment.Pond.1'],'CP.39.water': ['CP.39.water','CTCATGCG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','39','2013-01-08T09:40:00','8.03','25.1','48.8','6.7','5.5','5','0.18','96','8400','174','2','Day.39.H2O.Pond.1'],'CP2.42.water': ['CP2.42.water','AATCGATA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond2','42','2013-01-22T09:20:00','8.05','22.2','51.5','6.9','no_data','25','0.03','135','6600','144','1.6','Day.42.H2O.Pond.2'],'CP.12.sed': ['CP.12.sed','ACTGAAGT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','12','2012-12-12T10:30:00','8.12','24.7','45.1','6.6','20.7','226','0.67','79','5880','165','0.8','Day.12.Sediment.Pond.1'],'CP.49.water': ['CP.49.water','TTCAGCGA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','49','2013-01-18T09:00:00','7.98','25.6','46.1','6.4','9.8','33','no_data','145','8100','168','0.8','Day.49.H2O.Pond.1'],'CP.7.sed': ['CP.7.sed','ATTGCCGC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','7','2012-12-07T02:15:00','8.05','20.4','42.6','7.2','17','189','0.74','67','6360','114','0.4','Day.7.Sediment.Pond.1'],'CP2.38.water': ['CP2.38.water','AAGACTAC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond2','38','2013-01-18T10:00:00','7.95','21.9','48.1','7','6.8','29','no_data','192','10500','159','1.2','Day.38.H2O.Pond.2'],'CP.35.water': ['CP.35.water','AATCGATA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','35','2013-01-04T10:00:00','8.13','24.2','49.7','6.9','7.8','6','0.35','230','8600','174','1','Day35.H2O.Pond.1'],'CP.14.sed.PM': ['CP.14.sed.PM','GTTGGCCG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','14.5','2012-12-14T15:00:00','8.1','21.9','44.4','6.8','15','8','0.73','430','6240','174','0.6','Day.14.5.Sediment.Pond.1'],'CP.45.water': ['CP.45.water','CTAATGGC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','45','2013-01-14T15:50:00','8.03','22.7','43.3','7.1','9.6','43','0.28','230','7500','168','0.8','Day.45.H2O.Pond.1'],'T.0.water': ['T.0.water','AATCGATA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','Tropical','0','2012-12-10T11:30:00','7.95','22.3','52','7','53.2','13','0.09','1670','8040','258','6.4','Time.0.H2O.Tropical'],'CP.31.water': ['CP.31.water','TGGCGATT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','31','2012-12-31T09:20:00','8.1','24.3','50.1','7.1','6.9','10','0.08','410','7320','177','0.6','Day.31.H2O.Pond.1'],'CP.3.water': ['CP.3.water','GAACGGAG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','3','2012-12-03T10:00:00','8.06','21.2','44.8','7.1','18','142','no_data','72','7200','168','0.8','Day.3.H2O.Pond.1'],'CP2.42.sed': ['CP2.42.sed','ACCAATTG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond2','42','2013-01-22T09:20:00','8.05','22.2','51.5','6.9','no_data','25','0.03','135','6600','144','1.6','Day.42.Sediment.Pond.2'],'CP2.3.water.PM': ['CP2.3.water.PM','TATTAACT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond2','3.5','2012-12-14T16:30:00','8.18','22.2','43.8','6.1','8.5','10','0.6','350','6040','196','1.4','Day.14.5.H2O.Pond.2'],'CP.12.water': ['CP.12.water','AAGACTAC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','12','2012-12-12T10:30:00','8.12','24.7','45.1','6.6','20.7','226','0.67','79','5880','165','0.8','Day.12.H2O.Pond.1'],'CP2.0.sand': ['CP2.0.sand','GTTGGCCG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sand','CoralPond2','0','2012-12-11T10:10:00','7.52','8.3','47.2','9.5','15.7','4','0.21','60','5160','135','0.8','Time.0.Sand.Pond.2'],'CP.39.sed': ['CP.39.sed','ATTGCCGC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','39','2013-01-08T09:40:00','8.03','25.1','48.8','6.7','5.5','5','0.18','96','8400','174','2','Day.39.Sediment.Pond.1'],'CP2.28.sed': ['CP2.28.sed','CAACCTTA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond2','28','2013-01-08T11:20:00','7.99','21.9','45.5','7.2','14.1','2','0.16','185','6900','165','1.6','Day.39.Sediment.Pond.2'],'CP2.28.water': ['CP2.28.water','ATTGCCGC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond2','28','2013-01-08T11:20:00','7.99','21.9','45.5','7.2','14.1','2','0.16','185','6900','165','1.6','Day.39.H2O.Pond.2'],'CP.42.water': ['CP.42.water','ATTGCCGC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','42','2013-01-11T13:20:00','8.05','25.4','47.2','6.8','6.4','30','no_data','780','7800','165','1.4','Day.42.H2O.Pond.1'],'CP.12.sed.PM': ['CP.12.sed.PM','ATTGCCGC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','12.5','2012-12-12T17:00:00','8.16','20.8','45.7','6.3','12.2','198','0.75','208','6600','168','0.8','Day.12.5.Sediment.Pond.1'],'CP2.2.sed.PM': ['CP2.2.sed.PM','AACGCTAA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond2','2.5','2012-12-13T18:18:00','8.08','22.3','43.3','6.8','10.3','9','0.87','450','7440','210','0.8','Day.2.5.Sediment.Pond.2'],'CP2.13.water': ['CP2.13.water','ACTGAAGT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond2','13','2012-12-24T09:50:00','8.16','22.2','48.1','6.9','19.4','12','0.07','275','7800','153','0.8','Day.13.H2O.Pond.2'],'CP.3.sed': ['CP.3.sed','CTAATGGC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','3','2012-12-03T10:00:00','8.06','21.2','44.8','7.1','18','142','no_data','72','7200','168','0.8','Day.3.Sediment.Pond.1'],'CP.5.water': ['CP.5.water','GGAGGCTG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','5','2012-12-05T05:00:00','8.08','20.2','42.2','6.8','15','148','no_data','71','6240','168','1','Day.5.H2O.Pond.1'],'CP.16.sed': ['CP.16.sed','TTCAGCGA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','16','2012-12-16T13:00:00','7.88','25.3','51.5','6','27','6','0.24','496','5900','180','0.2','Day.16.Sediment.Pond.1'],'CP.14.sed': ['CP.14.sed','GGATTAGG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','14','2012-12-14T09:30:00','8.09','24.6','45.9','6.5','24.7','35','0.3','404','6120','153','0.8','Day.14.Sediment.Pond.1'],'CP.27.water': ['CP.27.water','CAACCTTA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','27','2012-12-27T10:30:00','8.09','24.3','47.2','6.8','8.8','3','0.24','1040','7200','144','0.8','Day.27.H2O.Pond.1'],'CP2.0.intake': ['CP2.0.intake','GTTGGCCG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Intake','CoralPond2','0','2012-12-11T10:10:00','7.52','8.3','47.2','9.5','15.7','4','0.21','60','5160','135','0.8','Time.0.Intake.Pond.2'],'CP.47.sed': ['CP.47.sed','GTTGGCCG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','47','2013-01-16T09:50:00','7.92','25.3','43.9','6.6','9.8','45','0','130','9900','165','1.4','Day.47.Sediment.Pond.1'],'CP2.16.water': ['CP2.16.water','TGACTGCT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond2','16','2012-12-27T12:05:00','8.23','21.4','46.7','7.2','14.8','6','0.04','195','6360','180','0.8','Day.27.H2O.Pond.2'],'CP2.36.sed': ['CP2.36.sed','TATTAACT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond2','36','2013-01-16T11:00:00','7.91','21.7','48.5','4.7','20.2','26','0.16','175','12000','154','1.6','Day.36.Sediment.Pond.2'],'CP.46.sed': ['CP.46.sed','GGATGCCA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','46','2013-01-15T09:15:00','8.06','24.7','44','6.8','3.9','68','0.15','520','1080','153','1','Day.46.Sediment.Pond.1'],'CP.35.sed': ['CP.35.sed','AATCGATA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','35','2013-01-04T10:00:00','8.13','24.2','49.7','6.9','7.8','6','0.35','230','8600','174','1','Day.35.Sediment.Pond.1'],'CP.42.sed': ['CP.42.sed','CTAATGGC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','42','2013-01-11T13:20:00','8.05','25.4','47.2','6.8','6.4','30','no_data','780','7800','165','1.4','Day.42.Sediment.Pond.1'],'CP2.2.water.PM': ['CP2.2.water.PM','AACGCTAA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond2','2.5','2012-12-13T18:18:00','8.08','22.3','43.3','6.8','10.3','9','0.87','450','7440','210','0.8','Day.2.5.H2O.Pond.2'],'CP.0.sand': ['CP.0.sand','ACTGAAGT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sand','CoralPond1','0','2012-11-30T11:00:00','7.52','10','50.2','no_data','2.2','23','no_data','73','6110','150','1','Time.0.Sand.Pond.1'],'CP2.1.sed': ['CP2.1.sed','GGAGGCTG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond2','1','2012-12-12T18:30:00','8.22','20.5','43.7','6.8','0','6','no_data','880','8520','186','2.4','Day.1.Sediment.Pond.2'],'CP.53.sed': ['CP.53.sed','ACTGAAGT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','53','2013-01-22T11:00:00','8.02','25.6','48.7','6.2','4.8','65','0.15','335','6900','165','1.6','Day.53.Sediment.Pond.1'],'CP.13.water': ['CP.13.water','GGAGGCTG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','13','2012-12-13T11:33:00','8.14','24.7','47.6','6.4','17.4','88','0.39','480','5880','171','0.8','Day.13.H2O.Pond.1'],'CP2.31.water': ['CP2.31.water','AACCAGTC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond2','31','2013-01-11T02:40:00','8.03','21.5','48','7.1','0','30','no_data','165','10200','153','0.4','Day.31.H2O.Pond.2'],'CP2.0.sed': ['CP2.0.sed','TATTAACT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond2','0','2012-12-11T10:12:00','7.54','10.9','45.7','7.3','9.3','0','0.44','36','7080','180','0.8','Time.0.Sediment.Pond.2'],'IW.0.water': ['IW.0.water','AACCAGTC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','Intake','0','2012-11-30T11:00:00','7.52','10','50.2','no_data','2.2','23','no_data','73','6110','150','1','Time.0.Intake.Pond.1'],'CP.24.water': ['CP.24.water','ACCAATTG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','24','2012-12-24T08:15:00','8.14','24.7','49.3','6.7','21.4','6','0.03','420','7440','192','1','Day.24.H2O.Pond.1'],'CP.31.sed': ['CP.31.sed','TTCAGCGA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','31','2012-12-31T09:20:00','8.1','24.3','50.1','7.1','6.9','10','0.08','410','7320','177','0.6','Day.31.Sediment.Pond.1'],'T.0.sed': ['T.0.sed','AAGACTAC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','Tropical','0','2012-12-10T11:30:00','7.95','22.3','52','7','53.2','13','0.09','1670','8040','258','6.4','Time.0.Sediment.Tropical'],'CP2.0.water': ['CP2.0.water','TATTAACT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond2','0','2012-12-11T10:12:00','7.54','10.9','45.7','7.3','9.3','0','0.44','36','7080','180','0.8','Time.0.H2O.Pond.2'],'CP.45.sed': ['CP.45.sed','GAACGGAG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','45','2013-01-14T15:50:00','8.03','22.7','43.3','7.1','9.6','43','0.28','230','7500','168','0.8','Day.45.Sediment.Pond.1'],'CP2.38.sed': ['CP2.38.sed','AATCGATA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond2','38','2013-01-18T10:00:00','7.95','21.9','48.1','7','6.8','29','no_data','192','10500','159','1.2','Day.38.Sediment.Pond.2'],'CP2.3.sed.PM': ['CP2.3.sed.PM','TATTAACT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond2','3.5','2012-12-14T16:30:00','8.18','22.2','43.8','6.1','8.5','10','0.6','350','6040','196','1.4','Day.14.5.Sediment.Pond.2'],'CP2.13.sed': ['CP2.13.sed','ATTGCCGC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond2','13','2012-12-24T09:50:00','8.16','22.2','48.1','6.9','19.4','12','0.07','275','7800','153','0.8','Day.13.Sediment.Pond.2'],'CP.14.water.PM': ['CP.14.water.PM','AACGCTAA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','14.5','2012-12-14T15:00:00','8.1','21.9','44.4','6.8','15','8','0.73','430','6240','174','0.6','Day.14.5.H2O.Pond.1'],'CP.47.water': ['CP.47.water','AACGCTAA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','47','2013-01-16T09:50:00','7.92','25.3','43.9','6.6','9.8','45','0','130','9900','165','1.4','Day.47.H2O.Pond.1'],'CP.21.sed': ['CP.21.sed','CTCATGCG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','21','2012-12-21T10:15:00','8.2','24.5','47.7','6.9','24','7','0.13','530','7800','180','0.8','Day.21.Sediment.Pond.1'],'CP.24.sed': ['CP.24.sed','ACTGAAGT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','24','2012-12-24T08:15:00','8.14','24.7','49.3','6.7','21.4','6','0.03','420','7440','192','1','Day.24.Sediment.Pond.1'],'CP.48.sed': ['CP.48.sed','TGACTGCT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','48','2013-01-17T13:40:00','8','26.3','45.5','6.5','13.8','36','no_data','302','23000','174','1.6','Day.48.Sediment.Pond.1'],'CP.5.sed': ['CP.5.sed','ACTGAAGT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','5','2012-12-05T05:00:00','8.08','20.2','42.2','6.8','15','148','no_data','71','6240','168','1','Day.5.Sediment.Pond.1'],'CP2.2.sed': ['CP2.2.sed','GGATTAGG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond2','2','2012-12-13T13:00:00','8.03','21.2','44.3','7','12.9','1','0.98','280','5040','168','0.4','Day.2.Sediment.Pond.2'],'CP2.35.sed': ['CP2.35.sed','AACGCTAA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond2','35','2013-01-15T10:20:00','7.93','22','48','6.9','8.3','35','0.11','40','6900','156','1.6','Day.35.Sediment.Pond.2'],'CP2.24.water': ['CP2.24.water','ACCAATTG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond2','24','2013-01-04T11:20:00','8.11','21.8','47','7.3','2.1','12','0.18','190','6720','154','0.8','Day.35.H2O.Pond.2'],'CP.1.sed': ['CP.1.sed','AACCAGTC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','1','2012-12-01T11:00:00','8.02','19.7','44','no_data','15.1','125','no_data','80','5640','159','1.4','Day.1.Sediment.Pond.1'],'CP2.5.sed': ['CP2.5.sed','AAGACTAC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond2','5','2012-12-16T14:30:00','8.15','18.5','41.3','6.6','19.8','8','0.26','260','6040','184','0.6','Day.5.Sediment.Pond.2'],'CP.7.water': ['CP.7.water','ACTGAAGT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','7','2012-12-07T02:15:00','8.05','20.4','42.6','7.2','17','189','0.74','67','6360','114','0.4','Day.7.H2O.Pond.1'],'CP.48.water': ['CP.48.water','TGACTGCT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','48','2013-01-17T13:40:00','8','26.3','45.5','6.5','13.8','36','no_data','302','23000','174','1.6','Day.48.H2O.Pond.1'],'CP2.3.water': ['CP2.3.water','GGATTAGG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond2','3','2012-12-14T11:00:00','8.1','21.9','44.4','6.8','15','8','0.73','430','6240','174','0.6','Day.14.H2O.Pond.2'],'CP2.34.water': ['CP2.34.water','GGAGGCTG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond2','34','2013-01-14T17:15:00','7.82','21.3','47.1','7','3.9','34','0.2','135','9000','159','1.2','Day.34.H2O.Pond.2'],'CP.13.sed': ['CP.13.sed','GGATGCCA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','13','2012-12-13T11:33:00','8.14','24.7','47.6','6.4','17.4','88','0.39','480','5880','171','0.8','Day.13.Sediment.Pond.1'],'CP.1.water': ['CP.1.water','CCTCTGAT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','1','2012-12-01T11:00:00','8.02','19.7','44','no_data','15.1','125','no_data','80','5640','159','1.4','Day.1.H2O.Pond.1'],'CP2.2.water': ['CP2.2.water','GGATGCCA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond2','2','2012-12-13T13:00:00','8.03','21.2','44.3','7','12.9','1','0.98','280','5040','168','0.4','Day.2.H2O.Pond.2'],'CP.16.water': ['CP.16.water','TGGCGATT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','16','2012-12-16T13:00:00','7.88','25.3','51.5','6','27','6','0.24','496','5900','180','0.2','Day.16.H2O.Pond.1'],'CP.46.water': ['CP.46.water','GGATGCCA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','46','2013-01-15T09:15:00','8.06','24.7','44','6.8','3.9','68','0.15','520','1080','153','1','Day.46.H2O.Pond.1'],'CP2.16.sed': ['CP2.16.sed','TGGCGATT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond2','16','2012-12-27T12:05:00','8.23','21.4','46.7','7.2','14.8','6','0.04','195','6360','180','0.8','Day.27.Sediment.Pond.2'],'CP2.10.sed': ['CP2.10.sed','CTCATGCG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond2','41','2012-12-21T11:45:00','8.08','22.1','46.6','6.8','17.8','12','0.08','428','6960','182','1','Day.10.Sediment.Pond.2'],'CP2.31.sed': ['CP2.31.sed','CCTCTGAT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond2','31','2013-01-11T02:40:00','8.03','21.5','48','7.1','0','30','no_data','165','10200','153','0.4','Day.31.Sediment.Pond.2'],'CP2.20.water': ['CP2.20.water','TTCAGCGA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond2','20','2012-12-31T10:50:00','8.09','22','48.1','7','5.9','7','0.15','200','7200','165','0.8','Day.31.H2O.Pond.2'],'CP.21.water': ['CP.21.water','TGGCGATT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','21','2012-12-21T10:15:00','8.20','24.5','47.7','6.9','24','7','0.13','530','7800','180','0.8','Day.21.H2O.Pond.1'],'CP2.3.sed': ['CP2.3.sed','AACGCTAA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond2','3','2012-12-14T11:00:00','8.1','21.9','44.4','6.8','15','8','0.73','430','6240','174','0.6','Day.14.Sediment.Pond.2'],'CP2.5.water': ['CP2.5.water','AAGACTAC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond2','5','2012-12-16T14:30:00','8.15','18.5','41.3','6.6','19.8','8','0.26','260','6040','184','0.6','Day.5.H2O.Pond.2'],'CP.19.water': ['CP.19.water','AACCAGTC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','19','2012-12-19T13:00:00','8.2','24.7','49.5','6.5','26.5','7','0','684','6200','180','1','Day.19.H2O.Pond.1'],'CP.10.water': ['CP.10.water','CAACCTTA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','10','2012-12-10T10:15:00','8.07','25','43.2','6.8','22.1','191','0.57','73','6000','150','3.4','Day.10.H2O.Pond.1'],'CP.53.water': ['CP.53.water','ACTGAAGT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','53','2013-01-22T11:00:00','8.02','25.6','48.7','6.2','4.8','65','0.15','335','6900','165','1.6','Day.53.H2O.Pond.1'],'CP2.10.water': ['CP2.10.water','AATCGATA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond2','10','2012-12-21T11:45:00','8.08','22.1','46.6','6.8','17.8','12','0.08','428','6960','182','1','Day.10.H2O.Pond.2'],'CP.0.sed': ['CP.0.sed','AACCAGTC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','0','2012-11-30T12:15:00','8.02','11','47.2','no_data','7.8','20','no_data','63','7560','156','0.8','Time.0.Sediment.Pond.1'],'CP2.36.water': ['CP2.36.water','GTTGGCCG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond2','36','2013-01-16T11:00:00','7.91','21.7','48.5','4.7','20.2','26','0.16','175','12000','154','1.6','Day.36.H2O.Pond.2'],'CP2.20.sed': ['CP2.20.sed','AAGACTAC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond2','20','2012-12-31T10:50:00','8.09','22','48.1','7','5.9','7','0.15','200','7200','165','0.8','Day.31.Sediment.Pond.2'],'CP2.37.water': ['CP2.37.water','TGGCGATT','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond2','37','2013-01-17T14:40:00','8','23','49.3','6.9','7.6','39','no_data','182','8400','186','0.6','Day.37.H2O.Pond.2'],'CP.14.water': ['CP.14.water','GGATGCCA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','14','2012-12-14T09:30:00','8.09','24.6','45.9','6.5','24.7','35','0.3','404','6120','153','0.8','Day.14.H2O.Pond.1'],'CP2.35.water': ['CP2.35.water','GGATTAGG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond2','35','2013-01-15T10:20:00','7.93','22','48','6.9','8.3','35','0.11','40','6900','156','1.6','Day.35.H2O.Pond.2'],'CP.49.sed': ['CP.49.sed','AAGACTAC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','49','2013-01-18T09:00:00','7.98','25.6','46.1','6.4','9.8','33','no_data','145','8100','168','0.8','Day.49.Sediment.Pond.1'],'CP.13.water.PM': ['CP.13.water.PM','ACCAATTG','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','13.5','2012-12-13T17:00:00','8.15','24.4','46.2','6.8','19.5','62','0.84','230','8280','213','0.8','Day.13.5.H2O.Pond.1'],'CP.0.water': ['CP.0.water','AACGCTAA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','0','2012-11-30T12:15:00','8.02','11','47.2','no_data','7.8','20','no_data','63','7560','156','0.8','Time.0.H20.Pond.1'],'CP.12.water.PM': ['CP.12.water.PM','AACGCTAA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond1','12.5','2012-12-12T17:00:00','8.16','20.8','45.7','6.3','12.2','198','0.75','208','6600','168','0.8','Day.12.5.H20.Pond.1'],'CP.27.sed': ['CP.27.sed','CAACCTTA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','27','2012-12-27T10:30:00','8.09','24.3','47.2','6.8','8.8','3','0.24','1040','7200','144','0.8','Day.27.Sediment.Pond.1'],'CP.19.sed': ['CP.19.sed','CAACCTTA','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','19','2012-12-19T13:00:00','8.20','24.7','49.5','6.5','26.5','7','0.00','684','6200','180','1','Day.19.Sediment.Pond.1'],'CP.10.sed': ['CP.10.sed','ATTGCCGC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Sediment','CoralPond1','10','2012-12-10T10:15:00','8.07','25','43.2','6.8','22.1','191','0.57','73','6000','150','3.4','Day.10.Sediment.Pond.1'],'CP2.8.water': ['CP2.8.water','AACCAGTC','TATGGTAATTGTGTGCCAGCMGCCGCGGTAA','Water','CoralPond2','39','2012-12-19T15:00:00','8.01','22.3','48','7.2','24.6','9','0.18','404','8400','174','1','Day.8.H2O.Pond.2'] };
+
+var g_spherePositions = new Array();
+g_spherePositions['CP.13.sed.PM'] = { 'name': 'CP.13.sed.PM', 'color': 0, 'x': -0.041784, 'y': 0.146464, 'z': 0.034857, 'P1': -0.041784, 'P2': 0.146464, 'P3': 0.034857, 'P4': -0.036184, 'P5': 0.024853, 'P6': -0.146270, 'P7': 0.011125, 'P8': -0.013204, 'P9': 0.074026, 'P10': -0.022585 };
+g_spherePositions['CP.39.water'] = { 'name': 'CP.39.water', 'color': 0, 'x': -0.009293, 'y': 0.001276, 'z': -0.134821, 'P1': -0.009293, 'P2': 0.001276, 'P3': -0.134821, 'P4': 0.163422, 'P5': 0.024222, 'P6': 0.013880, 'P7': 0.088211, 'P8': 0.024179, 'P9': -0.017351, 'P10': 0.011140 };
+g_spherePositions['CP2.42.water'] = { 'name': 'CP2.42.water', 'color': 0, 'x': -0.043285, 'y': -0.079013, 'z': -0.104020, 'P1': -0.043285, 'P2': -0.079013, 'P3': -0.104020, 'P4': 0.073930, 'P5': -0.076524, 'P6': 0.094331, 'P7': -0.025546, 'P8': -0.110124, 'P9': 0.075187, 'P10': 0.019450 };
+g_spherePositions['CP.12.sed'] = { 'name': 'CP.12.sed', 'color': 0, 'x': -0.019332, 'y': 0.058820, 'z': 0.031622, 'P1': -0.019332, 'P2': 0.058820, 'P3': 0.031622, 'P4': 0.007527, 'P5': 0.012006, 'P6': -0.144565, 'P7': -0.053413, 'P8': 0.027723, 'P9': 0.086334, 'P10': -0.016840 };
+g_spherePositions['CP.49.water'] = { 'name': 'CP.49.water', 'color': 0, 'x': 0.049206, 'y': -0.017598, 'z': -0.113337, 'P1': 0.049206, 'P2': -0.017598, 'P3': -0.113337, 'P4': 0.041760, 'P5': -0.124375, 'P6': 0.064857, 'P7': -0.014870, 'P8': -0.036600, 'P9': 0.071372, 'P10': 0.025768 };
+g_spherePositions['CP.7.sed'] = { 'name': 'CP.7.sed', 'color': 0, 'x': 0.011748, 'y': 0.194453, 'z': -0.022371, 'P1': 0.011748, 'P2': 0.194453, 'P3': -0.022371, 'P4': -0.017797, 'P5': 0.096729, 'P6': -0.065913, 'P7': 0.016179, 'P8': 0.062578, 'P9': 0.117493, 'P10': -0.037809 };
+g_spherePositions['CP2.38.water'] = { 'name': 'CP2.38.water', 'color': 0, 'x': 0.092505, 'y': -0.101965, 'z': -0.053763, 'P1': 0.092505, 'P2': -0.101965, 'P3': -0.053763, 'P4': 0.058910, 'P5': -0.078635, 'P6': 0.037685, 'P7': -0.066239, 'P8': -0.098291, 'P9': 0.008694, 'P10': 0.049408 };
+g_spherePositions['CP.35.water'] = { 'name': 'CP.35.water', 'color': 0, 'x': -0.031676, 'y': -0.034585, 'z': -0.135093, 'P1': -0.031676, 'P2': -0.034585, 'P3': -0.135093, 'P4': 0.138083, 'P5': -0.007619, 'P6': 0.038641, 'P7': 0.076665, 'P8': -0.004188, 'P9': 0.027434, 'P10': -0.018116 };
+g_spherePositions['CP.14.sed.PM'] = { 'name': 'CP.14.sed.PM', 'color': 0, 'x': 0.015540, 'y': 0.011357, 'z': -0.090649, 'P1': 0.015540, 'P2': 0.011357, 'P3': -0.090649, 'P4': -0.129314, 'P5': 0.037973, 'P6': 0.029696, 'P7': 0.015344, 'P8': -0.044743, 'P9': -0.078170, 'P10': -0.005413 };
+g_spherePositions['CP.45.water'] = { 'name': 'CP.45.water', 'color': 0, 'x': 0.016082, 'y': 0.050424, 'z': -0.049715, 'P1': 0.016082, 'P2': 0.050424, 'P3': -0.049715, 'P4': 0.052643, 'P5': -0.032648, 'P6': 0.041805, 'P7': -0.042007, 'P8': -0.047981, 'P9': -0.001504, 'P10': 0.041274 };
+g_spherePositions['CP.31.water'] = { 'name': 'CP.31.water', 'color': 0, 'x': 0.018952, 'y': -0.020193, 'z': -0.154856, 'P1': 0.018952, 'P2': -0.020193, 'P3': -0.154856, 'P4': 0.157091, 'P5': 0.004946, 'P6': -0.009801, 'P7': 0.059522, 'P8': 0.035709, 'P9': -0.021426, 'P10': 0.008426 };
+g_spherePositions['CP.3.water'] = { 'name': 'CP.3.water', 'color': 0, 'x': 0.071129, 'y': 0.222081, 'z': -0.049096, 'P1': 0.071129, 'P2': 0.222081, 'P3': -0.049096, 'P4': -0.072961, 'P5': 0.073960, 'P6': -0.013438, 'P7': 0.022808, 'P8': -0.047613, 'P9': 0.051428, 'P10': 0.030505 };
+g_spherePositions['CP2.42.sed'] = { 'name': 'CP2.42.sed', 'color': 0, 'x': -0.081182, 'y': -0.050500, 'z': 0.052846, 'P1': -0.081182, 'P2': -0.050500, 'P3': 0.052846, 'P4': 0.034547, 'P5': -0.029850, 'P6': -0.041379, 'P7': -0.121827, 'P8': 0.021067, 'P9': 0.037548, 'P10': 0.024256 };
+g_spherePositions['CP2.3.water.PM'] = { 'name': 'CP2.3.water.PM', 'color': 0, 'x': 0.148180, 'y': 0.148543, 'z': -0.148256, 'P1': 0.148180, 'P2': 0.148543, 'P3': -0.148256, 'P4': -0.129308, 'P5': -0.017225, 'P6': 0.003845, 'P7': 0.031456, 'P8': 0.045977, 'P9': -0.107580, 'P10': 0.011283 };
+g_spherePositions['CP.12.water'] = { 'name': 'CP.12.water', 'color': 0, 'x': 0.464087, 'y': -0.109540, 'z': 0.301774, 'P1': 0.464087, 'P2': -0.109540, 'P3': 0.301774, 'P4': -0.124573, 'P5': -0.013836, 'P6': 0.038319, 'P7': 0.057823, 'P8': -0.033374, 'P9': 0.099854, 'P10': -0.011718 };
+g_spherePositions['CP2.0.sand'] = { 'name': 'CP2.0.sand', 'color': 0, 'x': -0.217298, 'y': 0.154569, 'z': 0.235681, 'P1': -0.217298, 'P2': 0.154569, 'P3': 0.235681, 'P4': 0.018791, 'P5': -0.143110, 'P6': 0.144511, 'P7': -0.017008, 'P8': 0.104674, 'P9': -0.018828, 'P10': 0.060965 };
+g_spherePositions['CP.39.sed'] = { 'name': 'CP.39.sed', 'color': 0, 'x': -0.035134, 'y': -0.128026, 'z': -0.056652, 'P1': -0.035134, 'P2': -0.128026, 'P3': -0.056652, 'P4': -0.019766, 'P5': 0.005016, 'P6': -0.002436, 'P7': -0.011618, 'P8': -0.017999, 'P9': -0.027619, 'P10': 0.060763 };
+g_spherePositions['CP2.28.sed'] = { 'name': 'CP2.28.sed', 'color': 0, 'x': -0.087954, 'y': -0.173548, 'z': 0.001625, 'P1': -0.087954, 'P2': -0.173548, 'P3': 0.001625, 'P4': -0.097013, 'P5': -0.002266, 'P6': 0.009722, 'P7': -0.039418, 'P8': -0.034368, 'P9': 0.015014, 'P10': 0.057292 };
+g_spherePositions['CP2.28.water'] = { 'name': 'CP2.28.water', 'color': 0, 'x': 0.001137, 'y': -0.009026, 'z': -0.110152, 'P1': 0.001137, 'P2': -0.009026, 'P3': -0.110152, 'P4': 0.135280, 'P5': 0.047748, 'P6': -0.012971, 'P7': 0.078723, 'P8': 0.055785, 'P9': -0.029809, 'P10': 0.027390 };
+g_spherePositions['CP.42.water'] = { 'name': 'CP.42.water', 'color': 0, 'x': -0.105123, 'y': 0.031707, 'z': 0.214076, 'P1': -0.105123, 'P2': 0.031707, 'P3': 0.214076, 'P4': 0.018003, 'P5': -0.311931, 'P6': -0.275980, 'P7': 0.138187, 'P8': -0.039933, 'P9': -0.088845, 'P10': 0.006657 };
+g_spherePositions['CP.12.sed.PM'] = { 'name': 'CP.12.sed.PM', 'color': 0, 'x': -0.208795, 'y': -0.124193, 'z': 0.065522, 'P1': -0.208795, 'P2': -0.124193, 'P3': 0.065522, 'P4': -0.068766, 'P5': 0.066247, 'P6': 0.018935, 'P7': 0.010392, 'P8': -0.000356, 'P9': -0.000478, 'P10': -0.001957 };
+g_spherePositions['CP2.2.sed.PM'] = { 'name': 'CP2.2.sed.PM', 'color': 0, 'x': -0.161257, 'y': -0.104209, 'z': 0.024040, 'P1': -0.161257, 'P2': -0.104209, 'P3': 0.024040, 'P4': -0.062578, 'P5': 0.086005, 'P6': 0.029226, 'P7': 0.013967, 'P8': 0.007604, 'P9': -0.019509, 'P10': -0.037364 };
+g_spherePositions['CP2.13.water'] = { 'name': 'CP2.13.water', 'color': 0, 'x': 0.125296, 'y': 0.034431, 'z': -0.175544, 'P1': 0.125296, 'P2': 0.034431, 'P3': -0.175544, 'P4': -0.100412, 'P5': -0.157715, 'P6': 0.047375, 'P7': -0.004421, 'P8': 0.098832, 'P9': 0.008329, 'P10': -0.046857 };
+g_spherePositions['CP.3.sed'] = { 'name': 'CP.3.sed', 'color': 0, 'x': -0.017464, 'y': 0.208953, 'z': 0.039208, 'P1': -0.017464, 'P2': 0.208953, 'P3': 0.039208, 'P4': 0.025326, 'P5': 0.100035, 'P6': -0.052201, 'P7': 0.004744, 'P8': 0.039414, 'P9': 0.045949, 'P10': -0.001314 };
+g_spherePositions['CP.5.water'] = { 'name': 'CP.5.water', 'color': 0, 'x': 0.077037, 'y': 0.217385, 'z': -0.077761, 'P1': 0.077037, 'P2': 0.217385, 'P3': -0.077761, 'P4': -0.073722, 'P5': 0.077966, 'P6': -0.023963, 'P7': 0.073046, 'P8': -0.027050, 'P9': 0.068851, 'P10': 0.010159 };
+g_spherePositions['CP2.34.water'] = { 'name': 'CP2.34.water', 'color': 0, 'x': 0.327700, 'y': -0.114864, 'z': 0.234449, 'P1': 0.327700, 'P2': -0.114864, 'P3': 0.234449, 'P4': 0.141436, 'P5': 0.053300, 'P6': 0.052689, 'P7': 0.048765, 'P8': 0.009986, 'P9': -0.019654, 'P10': 0.005366 };
+g_spherePositions['CP.14.sed'] = { 'name': 'CP.14.sed', 'color': 0, 'x': 0.105521, 'y': 0.040005, 'z': -0.078127, 'P1': 0.105521, 'P2': 0.040005, 'P3': -0.078127, 'P4': -0.132000, 'P5': 0.005311, 'P6': 0.001669, 'P7': -0.018823, 'P8': -0.045091, 'P9': -0.076116, 'P10': 0.016144 };
+g_spherePositions['CP2.24.water'] = { 'name': 'CP2.24.water', 'color': 0, 'x': -0.006998, 'y': -0.047128, 'z': -0.118942, 'P1': -0.006998, 'P2': -0.047128, 'P3': -0.118942, 'P4': 0.146876, 'P5': -0.027922, 'P6': 0.025599, 'P7': 0.066501, 'P8': 0.026409, 'P9': 0.007066, 'P10': -0.000674 };
+g_spherePositions['CP2.0.intake'] = { 'name': 'CP2.0.intake', 'color': 0, 'x': -0.126741, 'y': 0.048013, 'z': -0.015456, 'P1': -0.126741, 'P2': 0.048013, 'P3': -0.015456, 'P4': 0.097520, 'P5': 0.010566, 'P6': 0.097050, 'P7': -0.058711, 'P8': -0.119584, 'P9': -0.034615, 'P10': -0.293660 };
+g_spherePositions['CP.47.sed'] = { 'name': 'CP.47.sed', 'color': 0, 'x': 0.098183, 'y': 0.003076, 'z': -0.021699, 'P1': 0.098183, 'P2': 0.003076, 'P3': -0.021699, 'P4': 0.053560, 'P5': 0.016827, 'P6': -0.068202, 'P7': -0.100788, 'P8': 0.030936, 'P9': -0.013402, 'P10': 0.028419 };
+g_spherePositions['CP2.16.water'] = { 'name': 'CP2.16.water', 'color': 0, 'x': -0.075831, 'y': 0.095120, 'z': 0.101142, 'P1': -0.075831, 'P2': 0.095120, 'P3': 0.101142, 'P4': 0.054928, 'P5': -0.177245, 'P6': 0.161228, 'P7': 0.091029, 'P8': 0.068572, 'P9': -0.001907, 'P10': 0.014464 };
+g_spherePositions['CP2.36.sed'] = { 'name': 'CP2.36.sed', 'color': 0, 'x': 0.156466, 'y': -0.051782, 'z': 0.123393, 'P1': 0.156466, 'P2': -0.051782, 'P3': 0.123393, 'P4': 0.107435, 'P5': 0.101831, 'P6': -0.078117, 'P7': -0.068318, 'P8': 0.078049, 'P9': -0.062849, 'P10': 0.006021 };
+g_spherePositions['CP.46.sed'] = { 'name': 'CP.46.sed', 'color': 0, 'x': 0.011500, 'y': 0.046180, 'z': 0.002677, 'P1': 0.011500, 'P2': 0.046180, 'P3': 0.002677, 'P4': 0.059418, 'P5': 0.045428, 'P6': -0.070015, 'P7': -0.123381, 'P8': 0.045184, 'P9': -0.003751, 'P10': 0.014742 };
+g_spherePositions['CP.35.sed'] = { 'name': 'CP.35.sed', 'color': 0, 'x': -0.079000, 'y': -0.155214, 'z': -0.007906, 'P1': -0.079000, 'P2': -0.155214, 'P3': -0.007906, 'P4': -0.109634, 'P5': -0.015472, 'P6': 0.012475, 'P7': -0.016420, 'P8': -0.030324, 'P9': 0.021126, 'P10': 0.053387 };
+g_spherePositions['CP.42.sed'] = { 'name': 'CP.42.sed', 'color': 0, 'x': -0.248124, 'y': -0.072238, 'z': 0.156531, 'P1': -0.248124, 'P2': -0.072238, 'P3': 0.156531, 'P4': -0.064271, 'P5': -0.109500, 'P6': -0.144835, 'P7': 0.129857, 'P8': -0.066440, 'P9': -0.058038, 'P10': -0.044712 };
+g_spherePositions['CP2.2.water.PM'] = { 'name': 'CP2.2.water.PM', 'color': 0, 'x': 0.044186, 'y': 0.179261, 'z': -0.064157, 'P1': 0.044186, 'P2': 0.179261, 'P3': -0.064157, 'P4': -0.021590, 'P5': 0.087874, 'P6': 0.013682, 'P7': 0.061302, 'P8': -0.053446, 'P9': -0.022014, 'P10': 0.042475 };
+g_spherePositions['CP.0.sand'] = { 'name': 'CP.0.sand', 'color': 0, 'x': -0.170756, 'y': 0.185372, 'z': 0.212859, 'P1': -0.170756, 'P2': 0.185372, 'P3': 0.212859, 'P4': 0.004018, 'P5': -0.095584, 'P6': -0.010913, 'P7': -0.047890, 'P8': -0.032190, 'P9': 0.021047, 'P10': -0.050653 };
+g_spherePositions['CP2.2.water'] = { 'name': 'CP2.2.water', 'color': 0, 'x': 0.039234, 'y': 0.187188, 'z': -0.052980, 'P1': 0.039234, 'P2': 0.187188, 'P3': -0.052980, 'P4': -0.025755, 'P5': 0.090544, 'P6': 0.009097, 'P7': 0.049992, 'P8': -0.040447, 'P9': -0.012591, 'P10': 0.040448 };
+g_spherePositions['CP.53.sed'] = { 'name': 'CP.53.sed', 'color': 0, 'x': -0.087720, 'y': -0.106077, 'z': 0.030377, 'P1': -0.087720, 'P2': -0.106077, 'P3': 0.030377, 'P4': 0.004617, 'P5': -0.157605, 'P6': -0.199098, 'P7': 0.037913, 'P8': -0.035975, 'P9': 0.081965, 'P10': 0.043852 };
+g_spherePositions['CP.13.water'] = { 'name': 'CP.13.water', 'color': 0, 'x': 0.193888, 'y': -0.011699, 'z': 0.058312, 'P1': 0.193888, 'P2': -0.011699, 'P3': 0.058312, 'P4': 0.061209, 'P5': 0.115042, 'P6': -0.062221, 'P7': 0.048752, 'P8': 0.028190, 'P9': -0.100422, 'P10': -0.005011 };
+g_spherePositions['CP2.31.water'] = { 'name': 'CP2.31.water', 'color': 0, 'x': -0.023107, 'y': -0.052673, 'z': -0.123471, 'P1': -0.023107, 'P2': -0.052673, 'P3': -0.123471, 'P4': 0.130320, 'P5': -0.011575, 'P6': 0.028335, 'P7': 0.059585, 'P8': 0.000942, 'P9': 0.024500, 'P10': -0.017432 };
+g_spherePositions['CP2.0.sed'] = { 'name': 'CP2.0.sed', 'color': 0, 'x': -0.203915, 'y': 0.190201, 'z': 0.206539, 'P1': -0.203915, 'P2': 0.190201, 'P3': 0.206539, 'P4': 0.009927, 'P5': -0.047380, 'P6': 0.099259, 'P7': -0.055702, 'P8': 0.046954, 'P9': -0.001453, 'P10': 0.054658 };
+g_spherePositions['IW.0.water'] = { 'name': 'IW.0.water', 'color': 0, 'x': 0.017766, 'y': -0.045077, 'z': -0.044237, 'P1': 0.017766, 'P2': -0.045077, 'P3': -0.044237, 'P4': -0.048182, 'P5': -0.041336, 'P6': -0.022457, 'P7': -0.119309, 'P8': -0.059397, 'P9': -0.024003, 'P10': -0.142784 };
+g_spherePositions['CP.24.water'] = { 'name': 'CP.24.water', 'color': 0, 'x': -0.130651, 'y': -0.142989, 'z': 0.012446, 'P1': -0.130651, 'P2': -0.142989, 'P3': 0.012446, 'P4': -0.045273, 'P5': 0.074856, 'P6': 0.006019, 'P7': -0.013289, 'P8': 0.048126, 'P9': 0.021655, 'P10': -0.009367 };
+g_spherePositions['CP.31.sed'] = { 'name': 'CP.31.sed', 'color': 0, 'x': -0.103835, 'y': -0.153935, 'z': -0.004534, 'P1': -0.103835, 'P2': -0.153935, 'P3': -0.004534, 'P4': -0.045197, 'P5': 0.046940, 'P6': 0.019494, 'P7': 0.020196, 'P8': 0.036601, 'P9': -0.003541, 'P10': -0.017805 };
+g_spherePositions['T.0.sed'] = { 'name': 'T.0.sed', 'color': 0, 'x': -0.152785, 'y': -0.172247, 'z': 0.004867, 'P1': -0.152785, 'P2': -0.172247, 'P3': 0.004867, 'P4': -0.089516, 'P5': 0.037349, 'P6': 0.011673, 'P7': 0.005579, 'P8': 0.000424, 'P9': 0.010110, 'P10': 0.042487 };
+g_spherePositions['CP2.0.water'] = { 'name': 'CP2.0.water', 'color': 0, 'x': -0.195270, 'y': 0.235972, 'z': 0.219250, 'P1': -0.195270, 'P2': 0.235972, 'P3': 0.219250, 'P4': 0.027079, 'P5': -0.102900, 'P6': 0.135931, 'P7': -0.035818, 'P8': 0.035756, 'P9': -0.046320, 'P10': 0.030662 };
+g_spherePositions['CP.45.sed'] = { 'name': 'CP.45.sed', 'color': 0, 'x': -0.050149, 'y': 0.050223, 'z': 0.057317, 'P1': -0.050149, 'P2': 0.050223, 'P3': 0.057317, 'P4': 0.049602, 'P5': 0.041601, 'P6': -0.035874, 'P7': -0.142274, 'P8': 0.022077, 'P9': 0.024490, 'P10': -0.007796 };
+g_spherePositions['CP2.38.sed'] = { 'name': 'CP2.38.sed', 'color': 0, 'x': -0.040308, 'y': -0.023984, 'z': 0.036177, 'P1': -0.040308, 'P2': -0.023984, 'P3': 0.036177, 'P4': 0.043495, 'P5': -0.083290, 'P6': -0.001935, 'P7': -0.094264, 'P8': 0.032049, 'P9': 0.045977, 'P10': 0.034834 };
+g_spherePositions['CP2.3.sed.PM'] = { 'name': 'CP2.3.sed.PM', 'color': 0, 'x': 0.026692, 'y': 0.168398, 'z': -0.063437, 'P1': 0.026692, 'P2': 0.168398, 'P3': -0.063437, 'P4': -0.038834, 'P5': 0.090576, 'P6': 0.018838, 'P7': 0.047477, 'P8': -0.061039, 'P9': -0.019774, 'P10': 0.036544 };
+g_spherePositions['CP2.13.sed'] = { 'name': 'CP2.13.sed', 'color': 0, 'x': -0.145205, 'y': -0.142821, 'z': -0.009422, 'P1': -0.145205, 'P2': -0.142821, 'P3': -0.009422, 'P4': -0.082035, 'P5': 0.065729, 'P6': 0.041677, 'P7': 0.020905, 'P8': 0.012640, 'P9': 0.000041, 'P10': -0.004413 };
+g_spherePositions['CP.14.water.PM'] = { 'name': 'CP.14.water.PM', 'color': 0, 'x': 0.090061, 'y': -0.099432, 'z': 0.017462, 'P1': 0.090061, 'P2': -0.099432, 'P3': 0.017462, 'P4': 0.036766, 'P5': 0.043322, 'P6': -0.025671, 'P7': -0.030690, 'P8': -0.032924, 'P9': -0.061164, 'P10': 0.003440 };
+g_spherePositions['CP.47.water'] = { 'name': 'CP.47.water', 'color': 0, 'x': 0.067921, 'y': -0.056280, 'z': -0.029080, 'P1': 0.067921, 'P2': -0.056280, 'P3': -0.029080, 'P4': 0.122904, 'P5': -0.086883, 'P6': 0.031555, 'P7': -0.073826, 'P8': -0.050801, 'P9': 0.008855, 'P10': 0.022656 };
+g_spherePositions['CP.21.sed'] = { 'name': 'CP.21.sed', 'color': 0, 'x': -0.139883, 'y': -0.145998, 'z': 0.011726, 'P1': -0.139883, 'P2': -0.145998, 'P3': 0.011726, 'P4': -0.062411, 'P5': 0.075168, 'P6': 0.005595, 'P7': -0.005577, 'P8': 0.025683, 'P9': 0.008875, 'P10': 0.004494 };
+g_spherePositions['CP.24.sed'] = { 'name': 'CP.24.sed', 'color': 0, 'x': -0.001015, 'y': -0.039478, 'z': -0.099610, 'P1': -0.001015, 'P2': -0.039478, 'P3': -0.099610, 'P4': 0.092598, 'P5': 0.006861, 'P6': -0.019251, 'P7': 0.020951, 'P8': 0.040335, 'P9': 0.025883, 'P10': -0.035561 };
+g_spherePositions['CP.48.sed'] = { 'name': 'CP.48.sed', 'color': 0, 'x': 0.054029, 'y': 0.027478, 'z': 0.014576, 'P1': 0.054029, 'P2': 0.027478, 'P3': 0.014576, 'P4': 0.058953, 'P5': 0.027427, 'P6': -0.061862, 'P7': -0.128117, 'P8': 0.026288, 'P9': 0.000763, 'P10': 0.024005 };
+g_spherePositions['CP.5.sed'] = { 'name': 'CP.5.sed', 'color': 0, 'x': 0.032634, 'y': 0.218778, 'z': -0.031575, 'P1': 0.032634, 'P2': 0.218778, 'P3': -0.031575, 'P4': -0.048203, 'P5': 0.095806, 'P6': -0.052253, 'P7': -0.001726, 'P8': 0.025273, 'P9': 0.084172, 'P10': -0.001448 };
+g_spherePositions['CP2.10.sed'] = { 'name': 'CP2.10.sed', 'color': 0, 'x': -0.158131, 'y': -0.141211, 'z': 0.007231, 'P1': -0.158131, 'P2': -0.141211, 'P3': 0.007231, 'P4': -0.083466, 'P5': 0.065125, 'P6': 0.036284, 'P7': 0.012331, 'P8': 0.006173, 'P9': -0.004279, 'P10': -0.005611 };
+g_spherePositions['CP2.35.sed'] = { 'name': 'CP2.35.sed', 'color': 0, 'x': 0.088622, 'y': -0.012403, 'z': 0.117316, 'P1': 0.088622, 'P2': -0.012403, 'P3': 0.117316, 'P4': 0.110479, 'P5': 0.080263, 'P6': -0.112998, 'P7': -0.116333, 'P8': 0.075314, 'P9': -0.069574, 'P10': 0.009776 };
+g_spherePositions['CP.27.water'] = { 'name': 'CP.27.water', 'color': 0, 'x': -0.046897, 'y': -0.019287, 'z': -0.087895, 'P1': -0.046897, 'P2': -0.019287, 'P3': -0.087895, 'P4': 0.105275, 'P5': 0.019103, 'P6': -0.050670, 'P7': 0.077578, 'P8': 0.043775, 'P9': 0.026627, 'P10': -0.056349 };
+g_spherePositions['CP.1.sed'] = { 'name': 'CP.1.sed', 'color': 0, 'x': -0.070433, 'y': 0.289226, 'z': 0.047534, 'P1': -0.070433, 'P2': 0.289226, 'P3': 0.047534, 'P4': 0.038812, 'P5': 0.096181, 'P6': 0.025529, 'P7': 0.037088, 'P8': -0.066753, 'P9': -0.019504, 'P10': 0.021477 };
+g_spherePositions['CP2.5.sed'] = { 'name': 'CP2.5.sed', 'color': 0, 'x': -0.084694, 'y': -0.091925, 'z': -0.030321, 'P1': -0.084694, 'P2': -0.091925, 'P3': -0.030321, 'P4': -0.051491, 'P5': 0.059626, 'P6': 0.007755, 'P7': 0.001149, 'P8': 0.019208, 'P9': 0.003959, 'P10': 0.002882 };
+g_spherePositions['CP.16.water'] = { 'name': 'CP.16.water', 'color': 0, 'x': 0.116949, 'y': -0.001161, 'z': -0.084460, 'P1': 0.116949, 'P2': -0.001161, 'P3': -0.084460, 'P4': 0.063552, 'P5': -0.019495, 'P6': -0.032832, 'P7': 0.001180, 'P8': -0.008269, 'P9': -0.026912, 'P10': -0.001345 };
+g_spherePositions['CP.7.water'] = { 'name': 'CP.7.water', 'color': 0, 'x': 0.256496, 'y': 0.109632, 'z': -0.030379, 'P1': 0.256496, 'P2': 0.109632, 'P3': -0.030379, 'P4': -0.083004, 'P5': 0.025417, 'P6': -0.042146, 'P7': -0.020339, 'P8': -0.051877, 'P9': -0.018560, 'P10': 0.009684 };
+g_spherePositions['CP2.31.sed'] = { 'name': 'CP2.31.sed', 'color': 0, 'x': -0.061602, 'y': -0.098540, 'z': -0.046903, 'P1': -0.061602, 'P2': -0.098540, 'P3': -0.046903, 'P4': -0.018960, 'P5': 0.064381, 'P6': -0.013011, 'P7': 0.014339, 'P8': 0.024769, 'P9': -0.018555, 'P10': 0.021493 };
+g_spherePositions['CP2.3.water'] = { 'name': 'CP2.3.water', 'color': 0, 'x': 0.081809, 'y': 0.005003, 'z': -0.073812, 'P1': 0.081809, 'P2': 0.005003, 'P3': -0.073812, 'P4': -0.148047, 'P5': -0.015552, 'P6': 0.024461, 'P7': -0.024761, 'P8': -0.055458, 'P9': -0.077843, 'P10': 0.014018 };
+g_spherePositions['CP.16.sed'] = { 'name': 'CP.16.sed', 'color': 0, 'x': -0.125758, 'y': -0.099535, 'z': 0.009954, 'P1': -0.125758, 'P2': -0.099535, 'P3': 0.009954, 'P4': -0.057952, 'P5': 0.077004, 'P6': 0.000938, 'P7': -0.004343, 'P8': 0.011655, 'P9': 0.005971, 'P10': -0.029968 };
+g_spherePositions['CP.13.sed'] = { 'name': 'CP.13.sed', 'color': 0, 'x': -0.098807, 'y': -0.120802, 'z': -0.014851, 'P1': -0.098807, 'P2': -0.120802, 'P3': -0.014851, 'P4': -0.067541, 'P5': 0.047430, 'P6': 0.014791, 'P7': -0.012749, 'P8': 0.012528, 'P9': 0.004578, 'P10': -0.014918 };
+g_spherePositions['CP.1.water'] = { 'name': 'CP.1.water', 'color': 0, 'x': -0.067699, 'y': 0.296250, 'z': 0.037790, 'P1': -0.067699, 'P2': 0.296250, 'P3': 0.037790, 'P4': 0.036948, 'P5': 0.107851, 'P6': 0.023721, 'P7': 0.046825, 'P8': -0.058255, 'P9': -0.019454, 'P10': 0.012498 };
+g_spherePositions['CP2.1.sed'] = { 'name': 'CP2.1.sed', 'color': 0, 'x': -0.146782, 'y': 0.118479, 'z': 0.072951, 'P1': -0.146782, 'P2': 0.118479, 'P3': 0.072951, 'P4': 0.006815, 'P5': 0.093248, 'P6': 0.034339, 'P7': -0.006974, 'P8': 0.006363, 'P9': -0.020624, 'P10': 0.001783 };
+g_spherePositions['T.0.water'] = { 'name': 'T.0.water', 'color': 0, 'x': -0.082501, 'y': -0.091508, 'z': -0.027329, 'P1': -0.082501, 'P2': -0.091508, 'P3': -0.027329, 'P4': 0.062414, 'P5': 0.048145, 'P6': -0.029931, 'P7': -0.005505, 'P8': 0.027610, 'P9': -0.033408, 'P10': 0.005643 };
+g_spherePositions['CP.46.water'] = { 'name': 'CP.46.water', 'color': 0, 'x': 0.199734, 'y': -0.052355, 'z': -0.009994, 'P1': 0.199734, 'P2': -0.052355, 'P3': -0.009994, 'P4': 0.041224, 'P5': -0.071963, 'P6': 0.024396, 'P7': -0.084384, 'P8': -0.069143, 'P9': -0.052982, 'P10': 0.020984 };
+g_spherePositions['CP2.16.sed'] = { 'name': 'CP2.16.sed', 'color': 0, 'x': -0.154752, 'y': -0.140951, 'z': -0.000683, 'P1': -0.154752, 'P2': -0.140951, 'P3': -0.000683, 'P4': -0.058762, 'P5': 0.059264, 'P6': 0.037190, 'P7': 0.017202, 'P8': 0.013634, 'P9': -0.004433, 'P10': -0.011432 };
+g_spherePositions['CP2.2.sed'] = { 'name': 'CP2.2.sed', 'color': 0, 'x': 0.022172, 'y': 0.164637, 'z': -0.053792, 'P1': 0.022172, 'P2': 0.164637, 'P3': -0.053792, 'P4': -0.050250, 'P5': 0.085895, 'P6': 0.019178, 'P7': 0.038222, 'P8': -0.048173, 'P9': -0.009679, 'P10': 0.032729 };
+g_spherePositions['CP.48.water'] = { 'name': 'CP.48.water', 'color': 0, 'x': 0.062039, 'y': -0.016532, 'z': -0.112252, 'P1': 0.062039, 'P2': -0.016532, 'P3': -0.112252, 'P4': 0.059369, 'P5': -0.132196, 'P6': 0.073482, 'P7': -0.040307, 'P8': -0.055577, 'P9': 0.038886, 'P10': 0.027228 };
+g_spherePositions['CP2.20.water'] = { 'name': 'CP2.20.water', 'color': 0, 'x': 0.069179, 'y': 0.001364, 'z': -0.174179, 'P1': 0.069179, 'P2': 0.001364, 'P3': -0.174179, 'P4': 0.055137, 'P5': -0.051614, 'P6': 0.034110, 'P7': 0.060514, 'P8': -0.003295, 'P9': 0.005180, 'P10': 0.017792 };
+g_spherePositions['CP.21.water'] = { 'name': 'CP.21.water', 'color': 0, 'x': -0.001977, 'y': -0.021363, 'z': -0.115864, 'P1': -0.001977, 'P2': -0.021363, 'P3': -0.115864, 'P4': 0.110015, 'P5': -0.018541, 'P6': 0.026357, 'P7': 0.040290, 'P8': 0.034892, 'P9': 0.014958, 'P10': -0.036624 };
+g_spherePositions['CP2.3.sed'] = { 'name': 'CP2.3.sed', 'color': 0, 'x': -0.079416, 'y': -0.138636, 'z': -0.020512, 'P1': -0.079416, 'P2': -0.138636, 'P3': -0.020512, 'P4': -0.073658, 'P5': 0.016114, 'P6': 0.010874, 'P7': -0.024890, 'P8': -0.024404, 'P9': 0.001768, 'P10': 0.029263 };
+g_spherePositions['CP2.5.water'] = { 'name': 'CP2.5.water', 'color': 0, 'x': 0.308152, 'y': 0.016414, 'z': -0.009265, 'P1': 0.308152, 'P2': 0.016414, 'P3': -0.009265, 'P4': -0.126495, 'P5': -0.038686, 'P6': 0.021957, 'P7': -0.028389, 'P8': 0.013555, 'P9': -0.114735, 'P10': -0.001031 };
+g_spherePositions['CP.19.water'] = { 'name': 'CP.19.water', 'color': 0, 'x': 0.061831, 'y': 0.007528, 'z': -0.107261, 'P1': 0.061831, 'P2': 0.007528, 'P3': -0.107261, 'P4': 0.075425, 'P5': -0.024461, 'P6': -0.008653, 'P7': 0.048531, 'P8': 0.043422, 'P9': -0.005648, 'P10': 0.003430 };
+g_spherePositions['CP.10.water'] = { 'name': 'CP.10.water', 'color': 0, 'x': 0.396478, 'y': -0.029625, 'z': 0.122878, 'P1': 0.396478, 'P2': -0.029625, 'P3': 0.122878, 'P4': -0.100243, 'P5': 0.008018, 'P6': 0.048990, 'P7': -0.007804, 'P8': -0.060054, 'P9': 0.033828, 'P10': -0.032819 };
+g_spherePositions['CP.53.water'] = { 'name': 'CP.53.water', 'color': 0, 'x': 0.024575, 'y': -0.004747, 'z': -0.110514, 'P1': 0.024575, 'P2': -0.004747, 'P3': -0.110514, 'P4': -0.081009, 'P5': -0.161824, 'P6': -0.061329, 'P7': 0.054448, 'P8': -0.029901, 'P9': 0.088526, 'P10': 0.003954 };
+g_spherePositions['CP2.10.water'] = { 'name': 'CP2.10.water', 'color': 0, 'x': 0.121174, 'y': 0.077543, 'z': -0.169949, 'P1': 0.121174, 'P2': 0.077543, 'P3': -0.169949, 'P4': -0.142518, 'P5': -0.133341, 'P6': 0.044383, 'P7': 0.013710, 'P8': 0.123659, 'P9': 0.002957, 'P10': -0.065949 };
+g_spherePositions['CP.0.sed'] = { 'name': 'CP.0.sed', 'color': 0, 'x': -0.195109, 'y': 0.155874, 'z': 0.205705, 'P1': -0.195109, 'P2': 0.155874, 'P3': 0.205705, 'P4': 0.005313, 'P5': -0.077145, 'P6': 0.006506, 'P7': -0.044190, 'P8': -0.014269, 'P9': -0.009537, 'P10': -0.057960 };
+g_spherePositions['CP2.36.water'] = { 'name': 'CP2.36.water', 'color': 0, 'x': -0.004512, 'y': -0.018049, 'z': -0.093065, 'P1': -0.004512, 'P2': -0.018049, 'P3': -0.093065, 'P4': 0.166827, 'P5': 0.001588, 'P6': 0.010641, 'P7': 0.040452, 'P8': 0.024654, 'P9': -0.027502, 'P10': -0.011565 };
+g_spherePositions['CP2.20.sed'] = { 'name': 'CP2.20.sed', 'color': 0, 'x': -0.085340, 'y': -0.155412, 'z': -0.026678, 'P1': -0.085340, 'P2': -0.155412, 'P3': -0.026678, 'P4': -0.093086, 'P5': -0.004440, 'P6': 0.008662, 'P7': -0.018666, 'P8': -0.033206, 'P9': 0.033798, 'P10': 0.048974 };
+g_spherePositions['CP2.37.water'] = { 'name': 'CP2.37.water', 'color': 0, 'x': -0.010937, 'y': -0.083952, 'z': -0.091854, 'P1': -0.010937, 'P2': -0.083952, 'P3': -0.091854, 'P4': 0.135292, 'P5': -0.055124, 'P6': 0.063414, 'P7': -0.019877, 'P8': -0.068198, 'P9': 0.041402, 'P10': 0.023189 };
+g_spherePositions['CP.14.water'] = { 'name': 'CP.14.water', 'color': 0, 'x': -0.168175, 'y': -0.153041, 'z': 0.019594, 'P1': -0.168175, 'P2': -0.153041, 'P3': 0.019594, 'P4': -0.061477, 'P5': 0.056214, 'P6': 0.043617, 'P7': 0.032322, 'P8': 0.004594, 'P9': -0.020770, 'P10': 0.002364 };
+g_spherePositions['CP2.35.water'] = { 'name': 'CP2.35.water', 'color': 0, 'x': 0.209534, 'y': -0.166464, 'z': 0.122599, 'P1': 0.209534, 'P2': -0.166464, 'P3': 0.122599, 'P4': 0.146749, 'P5': 0.038439, 'P6': 0.028597, 'P7': -0.006077, 'P8': -0.004520, 'P9': -0.014297, 'P10': -0.011579 };
+g_spherePositions['CP.49.sed'] = { 'name': 'CP.49.sed', 'color': 0, 'x': 0.098897, 'y': -0.081247, 'z': -0.014476, 'P1': 0.098897, 'P2': -0.081247, 'P3': -0.014476, 'P4': 0.000868, 'P5': -0.027875, 'P6': -0.035033, 'P7': -0.128044, 'P8': 0.008791, 'P9': 0.011011, 'P10': 0.017517 };
+g_spherePositions['CP.13.water.PM'] = { 'name': 'CP.13.water.PM', 'color': 0, 'x': 0.023467, 'y': -0.063100, 'z': 0.040403, 'P1': 0.023467, 'P2': -0.063100, 'P3': 0.040403, 'P4': 0.022874, 'P5': -0.027111, 'P6': -0.156325, 'P7': 0.028797, 'P8': -0.038407, 'P9': -0.074056, 'P10': -0.004777 };
+g_spherePositions['CP.0.water'] = { 'name': 'CP.0.water', 'color': 0, 'x': -0.130616, 'y': 0.270961, 'z': 0.155632, 'P1': -0.130616, 'P2': 0.270961, 'P3': 0.155632, 'P4': 0.017934, 'P5': -0.002774, 'P6': 0.058853, 'P7': -0.005604, 'P8': -0.048571, 'P9': -0.028098, 'P10': 0.016889 };
+g_spherePositions['CP.12.water.PM'] = { 'name': 'CP.12.water.PM', 'color': 0, 'x': 0.418594, 'y': -0.204891, 'z': 0.482225, 'P1': 0.418594, 'P2': -0.204891, 'P3': 0.482225, 'P4': 0.003533, 'P5': 0.042480, 'P6': 0.094060, 'P7': 0.141429, 'P8': 0.039468, 'P9': 0.080937, 'P10': -0.033097 };
+g_spherePositions['CP.27.sed'] = { 'name': 'CP.27.sed', 'color': 0, 'x': -0.205566, 'y': -0.154060, 'z': 0.049312, 'P1': -0.205566, 'P2': -0.154060, 'P3': 0.049312, 'P4': -0.076968, 'P5': 0.032347, 'P6': -0.024512, 'P7': 0.059746, 'P8': 0.002675, 'P9': 0.015522, 'P10': -0.008173 };
+g_spherePositions['CP.19.sed'] = { 'name': 'CP.19.sed', 'color': 0, 'x': -0.160860, 'y': -0.145705, 'z': 0.003709, 'P1': -0.160860, 'P2': -0.145705, 'P3': 0.003709, 'P4': -0.062300, 'P5': 0.073460, 'P6': 0.031417, 'P7': 0.019033, 'P8': 0.025290, 'P9': 0.000415, 'P10': -0.014480 };
+g_spherePositions['CP.10.sed'] = { 'name': 'CP.10.sed', 'color': 0, 'x': 0.095866, 'y': 0.155662, 'z': -0.090814, 'P1': 0.095866, 'P2': 0.155662, 'P3': -0.090814, 'P4': -0.090965, 'P5': 0.022495, 'P6': -0.063693, 'P7': -0.049301, 'P8': 0.055078, 'P9': 0.107456, 'P10': -0.040469 };
+g_spherePositions['CP2.8.water'] = { 'name': 'CP2.8.water', 'color': 0, 'x': 0.169186, 'y': 0.068511, 'z': -0.158360, 'P1': 0.169186, 'P2': 0.068511, 'P3': -0.158360, 'P4': -0.219343, 'P5': -0.195588, 'P6': 0.033561, 'P7': -0.012357, 'P8': 0.140687, 'P9': -0.048632, 'P10': -0.037966 };
+
+var g_ellipsesDimensions = new Array();
+var g_segments = 8, g_rings = 8, g_radius = 0.008547;
+var g_xAxisLength = 0.712211;
+var g_yAxisLength = 0.501141;
+var g_zAxisLength = 0.657769;
+var g_xMaximumValue = 0.464087;
+var g_yMaximumValue = 0.296250;
+var g_zMaximumValue = 0.482225;
+var g_xMinimumValue = -0.248124;
+var g_yMinimumValue = -0.204891;
+var g_zMinimumValue = -0.175544;
+var g_maximum = 0.482225;
+var g_pc1Label = "PC1 (19 %)";
+var g_pc2Label = "PC2 (15 %)";
+var g_pc3Label = "PC3 (13 %)";
+var g_number_of_custom_axes = 0;
+var g_fractionExplained = [0.194371, 0.151990, 0.125685, 0.071497, 0.062947, 0.043592, 0.033900, 0.023346, 0.021747, 0.018831];
+var g_fractionExplainedRounded = [19, 15, 13, 7, 6, 4, 3, 2, 2, 2];
+
+var g_taxaPositions = new Array();
+
+
+var g_vectorPositions = new Array();
+
+var g_comparisonPositions = new Array();
+var g_isSerialComparisonPlot = true;
+document.getElementById("logo").style.display = 'none';
+document.getElementById("logotable").style.display = 'none';
+
+ </script>
+</head>
+
+<body>
+
+<div id="overlay">
+    <div>
+    <img src="emperor_required_resources/img/emperor.png" alt="Emperor" id="smalllogo"/>
+        <h1>WebGL is not enabled!</h1>
+        <p>Emperor's visualization framework is WebGL based, it seems that your system doesn't have this resource available. Here is what you can do:</p>
+        <p id="explanation"><strong>Chrome:</strong> Type "chrome://flags/" into the address bar, then search for "Disable WebGL". Disable this option if you haven't already. <em>Note:</em> If you follow these steps and still don't see an image, go to "chrome://flags/" and then search for "Override software rendering list" and enable this option.</p>
+        <p id="explanation"><strong>Safari:</strong> Open Safari's menu and select Preferences. Click on the advanced tab, and then check "Show Developer" menu. Then open the "Developer" menu and select "Enable WebGL".</p>
+        <p id="explanation"><strong>Firefox:</strong> Go to Options through Firefox > Options or Tools > Options. Go to Advanced, then General. Check "Use hardware acceleration when available" and restart Firefox.</p>
+        <p id="explanation"><strong>Other browsers:</strong> The only browsers that support WebGL are Chrome, Safari, and Firefox. Please switch to these browsers when using Emperor.</p>
+        <p id="explanation"><em>Note:</em> Once you went through these changes, reload the page and it should work!</p>
+        <p id="source">Sources: Instructions for <a href="https://www.biodigitalhuman.com/home/enabling-webgl.html">Chrome and Safari</a>, and <a href="http://www.infewbytes.com/?p=144">Firefox</a></p>
+    </div>
+</div>
+
+<div id="plotToggle">
+    <form>
+      <div id="plottype">
+        <input id="pcoa" type="radio" id="pcoa" name="plottype" checked="checked" /><label for="pcoa">PCoA</label>
+        <input id="parallel" type="radio" id="parallel" name="plottype" /><label for="parallel">Parallel</label>
+      </div>
+    </form>
+</div>
+<div id="pcoaPlotWrapper" class="plotWrapper">
+    <label id="pointCount" class="ontop">
+    </label>
+
+    <div id="finder" class="arrow-right">
+    </div>
+
+    <div id="labels" class="unselectable">
+    </div>
+
+    <div id="taxalabels" class="unselectable">
+    </div>
+
+    <div id="axislabels" class="axislabels">
+    </div>
+
+    <div id="main_plot">
+    </div>
+</div>
+
+<div id="parallelPlotWrapper" class="plotWrapper">
+</div>
+
+<div class="separator" ondblclick="separatorDoubleClick()"></div>
+
+<div id="menu">
+    <div id="menutabs">
+        <ul>
+            <li><a href="#keytab">Key</a></li>
+            <li><a href="#colorby">Colors</a></li>
+            <li><a href="#showby">Visibility</a></li>
+            <li><a href="#scalingby">Scaling</a></li>
+            <li><a href="#labelby">Labels</a></li>
+            <li><a href="#axes">Axes</a></li>
+            <li><a href="#options">Options</a></li>
+        </ul>
+        <div id="keytab">
+            <form name="keyFilter">
+            <label>Filter  </label><input name="filterBox" id="searchBox" type="text" onkeyup="filterKey()"></input>
+            </form>
+            <div id="key">
+            </div>
+        </div>
+        <div id="colorby">
+            <br>
+            <input type="checkbox" onchange="toggleContinuousAndDiscreteColors(this)" id="discreteorcontinuouscolors" name="discreteorcontinuouscolors">  Use gradient colors</input>
+            <br><br>
+            <select id="colorbycombo" onchange="colorByMenuChanged()" size="3">
+            </select>
+            <div class="list" id="colorbylist">
+            </div>
+        </div>
+        <div id="showby" align="center">
+            <table width="100%">
+                <tr>
+                    <td align="center">
+                        <select id="showbycombo" onchange="showByMenuChanged()">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="list" id="showbylist" style="height:100%;width:100%">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 12px; padding-right:12px;">
+                        <br>
+                        <label for="sphereopacity" class="text">Global Sphere Opacity</label>
+                        <label id="sphereopacity" class="slidervalue"></label>
+                        <div id="sopacityslider" class="slider-range-max"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="scalingby" align="center">
+            <table width="100%">
+                <tr>
+                    <td align="center">
+                        <select id="scalingbycombo" onchange="scalingByMenuChanged()">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="list" id="scalingbylist" style="height:100%;width:100%">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 12px; padding-right:12px;">
+                        <br>
+                        <label for="sphereradius" class="text">Global Sphere Scale</label>
+                        <label id="sphereradius" class="slidervalue"></label>
+                        <div id="sradiusslider" class="slider-range-max"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="labelby">
+        <div id="labelsTop">
+            <form name="plotoptions">
+            <input type="checkbox" onClick="toggleLabels()">Samples Label Visibility</input>
+            </form>
+            <br>
+            <label for="labelopacity" class="text">Label Opacity</label>
+            <label id="labelopacity" class="slidervalue"></label>
+            <div id="lopacityslider" class="slider-range-max"></div>
+            <div id="labelColorHolder clearfix">
+            <table>
+                <tr><td><div id="labelColor" class="colorbox"></div></td><td><label>Master Label Color</label></td></tr>
+            </table></div>
+        </div>
+            <br>
+            <select id="labelcombo" onchange="labelMenuChanged()">
+            </select>
+            <div class="list" id="labellist">
+            </div>
+        </div>
+        <div id="axes">
+            <div id="pcoaaxes">
+                <div class="list" id="axeslist">
+                </div>
+            </div>
+        </div>
+        <div id="options">
+            <table>
+                <tr><td><div id="axeslabelscolor" class="colorbox" name="axeslabelscolor"></div></td><td title="Axes Labels Color">Axes Labels Color</td></tr>
+                <tr><td><div id="axescolor" class="colorbox" name="axescolor"></div></td><td title="Axes Color Title">Axes Color</td></tr>
+                <tr><td><div id="rendererbackgroundcolor" class="colorbox" name="rendererbackgroundcolor"></div></td><td title="Background Color Title">Background Color</td></tr>
+            </table>
+            <div id="pcoaviewoptions" class="">
+                <form name="settingsoptionscolor">
+                </form>
+                <div id="pcoaoptions" class="">
+                    <form name="settingsoptions">
+                        <input type="checkbox" onchange="toggleScaleCoordinates(this)" id="scale_checkbox" name="scale_checkbox">Scale coords by percent explained</input>
+                    </form>
+                </div>
+                <br><input id="reset" class="button" type="submit" value="Recenter Camera" style="" onClick="resetCamera()">
+                <br><br>
+                <hr class='section-break'>
+                <br>Filename <small>(only letters, numbers, ., - and _)</small>:
+                <br><input name="saveas_name" id="saveas_name" value="screenshot" type="text"/>
+                <br><input id="saveas_legends" class="checkbox" type="checkbox" style=""> Create legend
+                <input id="saveas" class="button" type="submit" value="Save as SVG" style="" onClick="saveSVG()"/>
+                <br><br>For a PNG, simply press 'ctrl+p'.
+                <div id="paralleloptions" class="">
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>  
+</div>
+</body>
+
+</html>

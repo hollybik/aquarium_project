@@ -1,0 +1,70 @@
+Logging started at 10:19:27 on 03 Mar 2015
+QIIME version: 1.8.0
+
+qiime_config values:
+sc_queue	all.q
+pynast_template_alignment_fp	/macqiime/greengenes/core_set_aligned.fasta.imputed
+cluster_jobs_fp	/macqiime/QIIME/bin/start_parallel_jobs.py
+assign_taxonomy_reference_seqs_fp	/macqiime/greengenes/gg_13_8_otus/rep_set/97_otus.fasta
+torque_queue	friendlyq
+template_alignment_lanemask_fp	/macqiime/greengenes/lanemask_in_1s_and_0s
+jobs_to_start	1
+cloud_environment	False
+qiime_scripts_dir	/macqiime/QIIME/bin/
+denoiser_min_per_core	50
+working_dir	/tmp/
+python_exe_fp	/macqiime/bin/python
+temp_dir	/tmp/
+blastall_fp	blastall
+seconds_to_sleep	60
+assign_taxonomy_id_to_taxonomy_fp	/macqiime/greengenes/gg_13_8_otus/taxonomy/97_otu_taxonomy.txt
+
+parameter file values:
+beta_diversity:metrics	binary_jaccard
+make_emperor:ignore_missing_samples	True
+parallel:jobs_to_start	2
+pick_otus:enable_rev_strand_match	True
+
+Input file md5 sums:
+otu_table_mc2_w_tax_no_pynast_failures_no_chimeras_NOchloroplasts_filtered_collapsereps_24Feb15_replacedmetadata_NOsingletons.biom: d9ce5e6854db18db1d5c6210ea45b987
+/Users/hollybik/Desktop/data/aquarium_data/mapping_files/final_dataset/AQmapfile_ALLRUNS5_final_1Oct14_collapsereps.txt: 43dcda7ff8159e8f3b088bfae1bf236c
+
+Executing commands.
+
+# Sample OTU table at 1000 seqs/sample command 
+/macqiime/bin/python /macqiime/QIIME/bin//single_rarefaction.py -i otu_table_mc2_w_tax_no_pynast_failures_no_chimeras_NOchloroplasts_filtered_collapsereps_24Feb15_replacedmetadata_NOsingletons.biom -o /Users/hollybik/Desktop/data/aquarium_data/MergedOnly_uclust_97_openref_10pctsub_14Dec14/chimera_chloroplasts_filtered/beta_div/jaccard_1000/otu_table_mc2_w_tax_no_pynast_failures_no_chimeras_NOchloroplasts_filtered_collapsereps_24Feb15_replacedmetadata_NOsingletons_even1000.biom -d 1000
+
+Stdout:
+
+Stderr:
+
+# Beta Diversity (binary_jaccard) command 
+/macqiime/bin/python /macqiime/QIIME/bin//parallel_beta_diversity.py -i /Users/hollybik/Desktop/data/aquarium_data/MergedOnly_uclust_97_openref_10pctsub_14Dec14/chimera_chloroplasts_filtered/beta_div/jaccard_1000/otu_table_mc2_w_tax_no_pynast_failures_no_chimeras_NOchloroplasts_filtered_collapsereps_24Feb15_replacedmetadata_NOsingletons_even1000.biom -o /Users/hollybik/Desktop/data/aquarium_data/MergedOnly_uclust_97_openref_10pctsub_14Dec14/chimera_chloroplasts_filtered/beta_div/jaccard_1000 --metrics binary_jaccard -T --jobs_to_start 2
+
+Stdout:
+
+Stderr:
+
+# Rename distance matrix (binary_jaccard) command 
+mv /Users/hollybik/Desktop/data/aquarium_data/MergedOnly_uclust_97_openref_10pctsub_14Dec14/chimera_chloroplasts_filtered/beta_div/jaccard_1000/binary_jaccard_otu_table_mc2_w_tax_no_pynast_failures_no_chimeras_NOchloroplasts_filtered_collapsereps_24Feb15_replacedmetadata_NOsingletons_even1000.txt /Users/hollybik/Desktop/data/aquarium_data/MergedOnly_uclust_97_openref_10pctsub_14Dec14/chimera_chloroplasts_filtered/beta_div/jaccard_1000/binary_jaccard_dm.txt
+
+Stdout:
+
+Stderr:
+
+# Principal coordinates (binary_jaccard) command 
+/macqiime/bin/python /macqiime/QIIME/bin//principal_coordinates.py -i /Users/hollybik/Desktop/data/aquarium_data/MergedOnly_uclust_97_openref_10pctsub_14Dec14/chimera_chloroplasts_filtered/beta_div/jaccard_1000/binary_jaccard_dm.txt -o /Users/hollybik/Desktop/data/aquarium_data/MergedOnly_uclust_97_openref_10pctsub_14Dec14/chimera_chloroplasts_filtered/beta_div/jaccard_1000/binary_jaccard_pc.txt 
+
+Stdout:
+
+Stderr:
+
+# Make emperor plots, binary_jaccard) command 
+make_emperor.py -i /Users/hollybik/Desktop/data/aquarium_data/MergedOnly_uclust_97_openref_10pctsub_14Dec14/chimera_chloroplasts_filtered/beta_div/jaccard_1000/binary_jaccard_pc.txt -o /Users/hollybik/Desktop/data/aquarium_data/MergedOnly_uclust_97_openref_10pctsub_14Dec14/chimera_chloroplasts_filtered/beta_div/jaccard_1000/binary_jaccard_emperor_pcoa_plot/ -m /Users/hollybik/Desktop/data/aquarium_data/mapping_files/final_dataset/AQmapfile_ALLRUNS5_final_1Oct14_collapsereps.txt --ignore_missing_samples
+
+Stdout:
+
+Stderr:
+
+
+Logging stopped at 10:20:39 on 03 Mar 2015
